@@ -1,0 +1,44 @@
+{
+  "main" : {
+    "welcome_bar_title": "Benvingut/a",
+    "welcome_title": "Investigació",
+    "welcome_body": "A la Universitat de Lleida s'està realitzant un mostreig d'àudio, on cada àudio consisteix en una bufada. Amb aquestes mostres es pretén realitzar una aplicació que obtingui l'edat pulmonar tal com ho faria un espiròmetre.\n\nDurant l'ús de l'aplicació no es guardarà informació (IP, correu electrònic, número de telèfon) que permeti relacionar la mostra amb el participant. Els arxius d'àudio s'enviaran a un servidor de la Universitat de Lleida de manera directa mitjançant una connexió segura. La Universitat de Lleida no té accés a expedients mèdics de les persones que facin ús de l'aplicació, ja que aquests arxius són totalment dissociats i no es poden relacionar amb cap perfil o expedient mèdic.\n\nUna versió posterior de l'aplicació cabarà sent un espiròmetre gratuït."
+  },
+  "questionnaire" : {
+    "gender": "Gènere",
+    "male": "Home",
+    "female": "Dona",
+    "dailySmoker": "Fuma a diari?",
+    "yes": "Sí",
+    "no": "No",
+    "age": "Edat",
+    "diseases": "Pateix alguna de les següents enfermetats?",
+    "heartdisease" : "Cardiopaties",
+    "fibromyalgia": "Fibromiàlgia",
+    "drugdependence": "Drogodependència",
+    "pneumonia": "Pneumònia",
+    "apnea": "Apnea",
+    "asthma": "Asma",
+    "bronchitis": "Bronquitis",
+    "other": "Altres afeccions respiratòries",
+    "continue": "Continuar"
+  },
+  "errors": {
+    "required": "Campo obligatori"
+  },
+  "recordPopup": {
+    "record": "Gravació d'àudio",
+    "steps": "Passos",
+    "step1": "1-\tAnar a un lloc sense sorolls.",
+    "step2": "2-\tMantenir una distància de 20 cm al mòbil.",
+    "step2desktop": "2-\tMantenir una distància de 20 cm al ordinador.",
+    "step3": "3-\tPrémer la icona del micròfon. Expulsar l’aire el màxim temps possible. Prémer Aturar en acabar.",
+    "tutorial": "Mostrar exemple"
+  },
+  "consent": {
+    "agree": "Un cop llegida aquesta pàgina, feu clic a \"D'acord\" si doneu el vostre consentiment per participar-hi.",
+    "required": "Ha d'acceptar per a poder continuar.",
+    "privacy": "Privacitat",
+    "accept": "D'acord"
+  }
+}

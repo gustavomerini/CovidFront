@@ -1,0 +1,32 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+
+
+<div class="dark-theme full-height">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light stroke fixed-top navbar-default navbar-static-top">
+
+    <a class="navbar-brand" href="#">
+      COVID UDL
+      <a class="navbar-brand-description">Covid detection through sound</a>
+    </a>
+
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link dropdown-item" (click)="changeLanguage('en')" href="#"><span class="flag-icon flag-icon-gb"></span><span>EN</span></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link dropdown-item" (click)="changeLanguage('es')" href="#"><span class="flag-icon flag-icon-es"></span><span>ES</span></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link dropdown-item" (click)="changeLanguage('ca')" href="#"><span class="flag-icon flag-icon-es-ct"></span><span>CAT</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

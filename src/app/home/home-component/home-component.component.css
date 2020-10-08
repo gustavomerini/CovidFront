@@ -1,0 +1,39 @@
+.main-item {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.record-button {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.record-screen {
+  color: white;
+}
+
+.done-button {
+  color: green;
+}
+
+.invalid {
+  color: #ff5252;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.popupGif {
+  max-height: 100%;
+  max-width: 100%;
+}
+html {
+  height: 100%;
+}
+
+html, body, #fullheight {
+  min-height: 100% !important;
+  height: 100%;
+}

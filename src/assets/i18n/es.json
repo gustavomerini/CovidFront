@@ -1,0 +1,44 @@
+{
+  "main" : {
+    "welcome_bar_title": "Bienvenido/a",
+    "welcome_title": "Investigación",
+    "welcome_body": "En la Universidad de Lleida se está realizando un muestreo de audio, donde cada uno consiste en un soplo. Con estas muestras se pretende realizar una aplicación que obtenga la edad pulmonar como lo haría un espirómetro.\n\nDurante el uso de la aplicación no se guardará información (IP, correo electrónico, número de teléfono) que permita relacionar la muestra con el participante. Los archivos de audio se enviarán a un servidor de la Universidad de Lleida de forma directa mediante una conexión segura. La Universidad de Lleida no tiene acceso a expedientes médicos de las personas que hagan uso de la aplicación, ya que estos archivos son totalmente disociados y no se puede relacionar con ningún perfil o expediente médico.\n\nUna versión posterior de la aplicación acabará siendo un espirómetro gratuito."
+  },
+  "questionnaire" : {
+    "gender": "Género",
+    "male": "Hombre",
+    "female": "Mujer",
+    "dailySmoker": "¿Fuma a diario?",
+    "yes": "Sí",
+    "no": "No",
+    "age": "Edad",
+    "diseases": "¿Padece de alguna de las siguientes enfermedades?",
+    "heartdisease" : "Cardiopatías",
+    "fibromyalgia": "Fibromialgia",
+    "drugdependence": "Drogodependéncia",
+    "pneumonia": "Neumonía",
+    "apnea": "Apnea",
+    "asthma": "Asma",
+    "bronchitis": "Bronquitis",
+    "other": "Otras afecciones respiratorias",
+    "continue": "Continuar"
+  },
+  "errors": {
+    "required": "Campo obligatorio"
+  },
+  "recordPopup": {
+    "record": "Grabación de audio",
+    "steps": "Pasos",
+    "step1": "1-\tIr a un lugar sin ruidos.",
+    "step2": "2-\tMantener una distancia de 20 cm al móvil.",
+    "step2desktop": "2-\tMantener una distancia de 20 cm al ordenador.",
+    "step3": "3-\tPulsar el icono del micrófono. Expulsar aire el máximo tiempo posible. Pulsar \"Stop\" al terminar.",
+    "tutorial": "Mostrar ejemplo"
+  },
+  "consent": {
+    "agree": "Una vez leída esta página, haga clic en \"Acepto\" si da su consentimiento para participar.",
+    "required": "Debe aceptar para poder continuar.",
+    "privacy": "Privacidad",
+    "accept": "Acepto"
+  }
+}

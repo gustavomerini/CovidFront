@@ -1,0 +1,147 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{"recordPopup.record" | translate}}!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal('Cross click')">
+      <span aria-hidden="true">	&#10060;</span>
+    </button>
+  </div>
+  <div class="modal-body record-screen">
+
+    {{"recordPopup.steps" | translate}}
+    <mat-list>
+      <mat-list-item> {{"recordPopup.step1" | translate}} </mat-list-item>
+
+      <div *ngIf="isMobile; else step2Desktop">
+        <mat-list-item> {{"recordPopup.step2" | translate}} </mat-list-item>
+      </div>
+
+      <ng-template #step2Desktop>
+        <mat-list-item> {{"recordPopup.step2desktop" | translate}} </mat-list-item>
+      </ng-template>
+      <br>
+      <mat-list-item> {{"recordPopup.step3" | translate}} </mat-list-item>
+      <br>
+    </mat-list>
+
+    <div class="record-button">
+      <button mat-raised-button color="primary" (click)="showTutorial()">{{"recordPopup.tutorial" | translate}}</button>
+    </div>
+
+    <video loop onloadedmetadata="video = this" id="ExampleGifMobile" class="img-fluid" #videoPlayerDesktop style="display: none" preload>
+      <source src="../../../assets/IMG_7149.mov" type="video/mp4">
+    </video>
+
+    <video loop onloadedmetadata="video = this" id="ExampleGifDesktop" class="img-fluid" #videoPlayerDesktop style="display: none " preload>
+      <source src="../../../assets/Video_PC.mov" type="video/mp4">
+    </video>
+
+    <div *ngIf="recording; else notRecording">
+      <div class="record-button">
+        <button mat-raised-button color="warn" (click)="stopRecording()">Stop <span class="fa fa-stop"></span></button>
+      </div>
+    </div>
+
+    <ng-template #notRecording>
+      <div class="record-button">
+        <button mat-raised-button color="primary" (click)="recordAudio()">{{"recordPopup.record" | translate}} <span class="fa fa-microphone"></span></button>
+      </div>
+    </ng-template>
+  </div>
+</ng-template>
+
+<ng-template #successmodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-success">Thanks for your collaboration!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</ng-template>
+
+<div class="intro-2 rgba-gradient full-height">
+<div class="full-bg-img container-full full-height main-page">
+  <div class="container flex-center container-full">
+    <div class="row flex-center pt-5 mt-3 container-full">
+      <div class="col-md-6 text-center text-md-left margins container-full">
+        <div class="white-text container-full" >
+          <h1 class="h1-responsive wow fadeInLeft main-item" data-wow-delay="0.3s">{{"main.welcome_title" | translate}}</h1>
+          <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+
+          <div class="modal-body">
+            <form [formGroup]="registerForm" (ngSubmit)="openModal(content, 'modal-basic-title')">
+              <div class="form-group flex-column">
+
+                <div>
+                  <label>{{'questionnaire.gender' | translate}} </label>
+                  <br>
+                  <div *ngIf="submitted && f.gender.errors && f.gender.errors.required" class="invalid">
+                    <div>{{'errors.required' | translate}}</div>
+                  </div>
+                  <mat-radio-group formControlName="gender">
+                    <mat-radio-button value="H">{{'questionnaire.male' | translate}}</mat-radio-button> &nbsp;
+                    <mat-radio-button value="D">{{'questionnaire.female' | translate}}</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+
+                <mat-form-field class="example-full-width">
+                  <input formControlName="age" type="number" placeholder="{{'questionnaire.age' | translate}}" aria-label="Age" matInput>
+                </mat-form-field>
+
+                <div>
+                  <label>{{'questionnaire.dailySmoker' | translate}} </label>
+                  <div *ngIf="submitted && f.smoker.errors && f.smoker.errors.required" class="invalid">
+                    <div>{{'errors.required' | translate}}</div>
+                  </div>
+                  <br>
+                  <mat-radio-group formControlName="smoker">
+                    <mat-radio-button value="Y">{{'questionnaire.yes' | translate}}</mat-radio-button> &nbsp;
+                    <mat-radio-button value="N">{{'questionnaire.no' | translate}}</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+
+              <br>
+
+
+                <section>
+                <label>{{'questionnaire.diseases' | translate}} </label>
+                <br>
+                <mat-checkbox [ngModelOptions]="{standalone: true}"
+                              [(ngModel)]="cardio"> {{'questionnaire.heartdisease' | translate}}</mat-checkbox>
+                <br>
+                <mat-checkbox [ngModelOptions]="{standalone: true}"
+                              [(ngModel)]="fibro"> {{'questionnaire.fibromyalgia' | translate}}</mat-checkbox>
+                <br>
+                <mat-checkbox [ngModelOptions]="{standalone: true}"
+                              [(ngModel)]="drogodep"> {{'questionnaire.drugdependence' | translate}}</mat-checkbox>
+                <br>
+                <mat-checkbox [ngModelOptions]="{standalone: true}"
+                              [(ngModel)]="pneumo"> {{'questionnaire.pneumonia' | translate}}</mat-checkbox>
+                <br>
+                <mat-checkbox [ngModelOptions]="{standalone: true}"
+                              [(ngModel)]="apnea"> {{'questionnaire.apnea' | translate}}</mat-checkbox>
+                <br>
+                <mat-checkbox [ngModelOptions]="{standalone: true}"
+                              [(ngModel)]="asma"> {{'questionnaire.asthma' | translate}}</mat-checkbox>
+
+                <br>
+                <mat-checkbox [ngModelOptions]="{standalone: true}"
+                              [(ngModel)]="bronchitis"> {{'questionnaire.bronchitis' | translate}}</mat-checkbox>
+                <br>
+                <mat-checkbox [ngModelOptions]="{standalone: true}"
+                              [(ngModel)]="other"> {{'questionnaire.other' | translate}}</mat-checkbox>
+                </section>
+              </div>
+
+              <div class="form-group">
+                <button [disabled]="loading" class="btn btn-outline-dark">{{'questionnaire.continue' | translate}}</button>
+              </div>
+            </form>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

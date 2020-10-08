@@ -1,0 +1,113 @@
+@import '~@angular/material/theming';
+
+// NOTE: Theming is currently experimental and not yet publically released!
+
+:root {
+  /* Colors */
+  --foreground-default: #08090a;
+  --foreground-secondary: #41474d;
+  --foreground-tertiary: #797c80;
+  --foreground-quaternary: #f4faff;
+  --foreground-light: #41474d;
+
+  --background-default: #f4faff;
+  --background-secondary: #a3b9cc;
+  --background-tertiary: #5c7d99;
+  --background-light: #ffffff;
+
+  --primary-default: #5dfdcb;
+  --primary-dark: #24b286;
+  --primary-light: #b2ffe7;
+
+  --error-default: #ef3e36;
+  --error-dark: #800600;
+  --error-light: #ffcecc;
+
+  /* Shadows */
+  --background-tertiary-shadow: 0 1px 3px 0 rgba(92, 125, 153, 0.5);
+}
+
+@include mat-core();
+
+$primary: mat-palette($mat-deep-purple);
+$accent:  mat-palette($mat-amber, A200, A100, A400);
+$theme: mat-light-theme($primary, $accent);
+$background: map-get($theme, background);
+
+@include angular-material-theme($theme);
+
+$dark-primary: mat-palette($mat-indigo, 400);
+$dark-accent:  mat-palette($mat-blue-grey, A200, A100, A400);
+$dark-warn:    mat-palette($mat-red, A200);
+
+$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+.dark-theme {
+  color: $light-primary-text;
+  $dark-primary: mat-palette($mat-yellow);
+  $dark-accent: mat-palette($mat-amber, A400, A100, A700);
+  $dark-warn: mat-palette($mat-red);
+  $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+}
+
+#sidebar-wrapper {
+  background-color: #424242;
+}
+
+.darkgrey {
+  background-color: #424242;
+}
+
+.modal-body {
+  background-color: #424242;
+}
+
+.modal-header {
+  color: white;
+}
+
+.modal-content {
+  background-color: #424242;
+}
+
+.btn-outline-dark {
+  color: black;
+  background-color: lightgrey;
+}
+
+body {
+  background-color: grey;
+}
+
+.intro-header {
+  height: unset !important;
+}
+
+.intro-2 {
+
+  background-size: cover;
+}
+
+.main-page {
+  padding-top: 1em;
+}
+
+.top-nav-collapse {
+  background-color: #424f95 !important;
+}
+
+.halved {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+h6 {
+  line-height: 1.7;
+}
+.rgba-gradient .full-bg-img {
+  //background: linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);
+  background: linear-gradient(to right, rgb(220, 220, 220, 0.8), rgb(169, 169, 169, 0.8) 100%);
+  background-size: cover;
+}
+
+@include angular-material-theme($dark-theme);

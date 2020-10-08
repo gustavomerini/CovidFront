@@ -1,0 +1,44 @@
+{
+  "main" : {
+    "welcome_bar_title": "Welcome",
+    "welcome_title": "Research",
+    "welcome_body": "At the University of Lleida, an audio sampling is being carried out, where each one consists of a blow. With these samples, the aim is to carry out an application to obtain the lung age as a spirometer would do.\n\nDuring the use of the application, no information (IP, email, phone number) will be saved that would allow the sample to be related to the participant. The audio files will be sent to a server at the University of Lleida directly through a secure connection. The University of Lleida does not have access to the medical records of the people who use the application, since these files are totally dissociated and cannot be related to any profile or medical record.\n\nA later version of the application will end up being a free spirometer"
+  },
+  "questionnaire" : {
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "dailySmoker": "Do you smoke on a daily basis?",
+    "yes": "Yes",
+    "no": "No",
+    "age": "Age",
+    "diseases": "Do you have any of these diseases?",
+    "heartdisease" : "Heart Disease",
+    "fibromyalgia": "Fibromyalgia",
+    "drugdependence": "Drug dependence",
+    "pneumonia": "Pneumonia",
+    "apnea": "Apnea",
+    "asthma": "Asthma",
+    "bronchitis": "Bronchitis",
+    "other": "Other respiratory conditions",
+    "continue": "Continue"
+  },
+  "errors": {
+    "required": "Field required"
+  },
+  "recordPopup": {
+    "record": "Audio recording",
+    "steps": "Steps",
+    "step1": "1-\tGo to a place without noise.",
+    "step2": "2-\tMaintain a distance of 20 cm to the mobile.",
+    "step2desktop": "2-\tMaintain a distance of 20 cm to the computer.",
+    "step3": "3-\tPress the microphone icon. Breathe out as long as possible. Press \"Stop\" when finished.",
+    "tutorial": "Show example"
+  },
+  "consent": {
+    "agree": "Once you have read this page, please click \"I agree\" if you give your consent to participate",
+    "required": "You must accept to continue.",
+    "privacy": "Privacy",
+    "accept": "I agree"
+  }
+}
