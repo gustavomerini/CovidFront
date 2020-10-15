@@ -21,18 +21,21 @@
     "asthma": "Asma",
     "bronchitis": "Bronquitis",
     "other": "Altres afeccions respiratòries",
-    "continue": "Continuar"
+    "continue": "Continuar",
+    "covid": "Ha patit COVID-19?"
   },
   "errors": {
     "required": "Campo obligatori"
   },
   "recordPopup": {
-    "record": "Gravació d'àudio",
+    "record": "Gravació de tos",
+    "recordVowels": "Gravació de vocals",
     "steps": "Passos",
     "step1": "1-\tAnar a un lloc sense sorolls.",
     "step2": "2-\tMantenir una distància de 20 cm al mòbil.",
     "step2desktop": "2-\tMantenir una distància de 20 cm al ordinador.",
-    "step3": "3-\tPrémer la icona del micròfon. Expulsar l’aire el màxim temps possible. Prémer Aturar en acabar.",
+    "step3": "3-\tPrémer el botó 'Tossir'. Tosseixi 4/5 vegades. Prémer Aturar en acabar.",
+    "step4": "4-\tPrémer el botó 'Vocals'. Digui les vocals (A E I O U) separadament. Prémer Aturar en acabar.",
     "tutorial": "Mostrar exemple"
   },
   "consent": {

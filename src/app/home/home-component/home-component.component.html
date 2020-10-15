@@ -21,6 +21,9 @@
       <br>
       <mat-list-item> {{"recordPopup.step3" | translate}} </mat-list-item>
       <br>
+      <br>
+      <mat-list-item> {{"recordPopup.step4" | translate}} </mat-list-item>
+      <br>
     </mat-list>
 
     <div class="record-button">
@@ -44,6 +47,18 @@
     <ng-template #notRecording>
       <div class="record-button">
         <button mat-raised-button color="primary" (click)="recordAudio()">{{"recordPopup.record" | translate}} <span class="fa fa-microphone"></span></button>
+      </div>
+    </ng-template>
+
+    <div *ngIf="recordingVowels; else notRecordingVowels">
+      <div class="record-button">
+        <button mat-raised-button color="warn" (click)="stopRecordingVowels()">Stop <span class="fa fa-stop"></span></button>
+      </div>
+    </div>
+
+    <ng-template #notRecordingVowels>
+      <div class="record-button">
+        <button mat-raised-button color="primary" (click)="recordAudioVowels()">{{"recordPopup.recordVowels" | translate}} <span class="fa fa-microphone"></span></button>
       </div>
     </ng-template>
   </div>
@@ -99,6 +114,17 @@
                   </mat-radio-group>
                 </div>
 
+                <div>
+                  <label>{{'questionnaire.covid' | translate}} </label>
+                  <div *ngIf="submitted && f.covid.errors && f.covid.errors.required" class="invalid">
+                    <div>{{'errors.required' | translate}}</div>
+                  </div>
+                  <br>
+                  <mat-radio-group formControlName="covid">
+                    <mat-radio-button value="Y">{{'questionnaire.yes' | translate}}</mat-radio-button> &nbsp;
+                    <mat-radio-button value="N">{{'questionnaire.no' | translate}}</mat-radio-button>
+                  </mat-radio-group>
+                </div>
               <br>
 
 
