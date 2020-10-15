@@ -21,18 +21,21 @@
     "asthma": "Asthma",
     "bronchitis": "Bronchitis",
     "other": "Other respiratory conditions",
-    "continue": "Continue"
+    "continue": "Continue",
+    "covid": "Have you suffered from COVID-19?"
   },
   "errors": {
     "required": "Field required"
   },
   "recordPopup": {
-    "record": "Audio recording",
+    "record": "Cough recording",
+    "recordVowels": "Vowels recording",
     "steps": "Steps",
     "step1": "1-\tGo to a place without noise.",
     "step2": "2-\tMaintain a distance of 20 cm to the mobile.",
     "step2desktop": "2-\tMaintain a distance of 20 cm to the computer.",
-    "step3": "3-\tPress the microphone icon. Breathe out as long as possible. Press \"Stop\" when finished.",
+    "step3": "3-\tPress the 'Cough' button. Cough 4/5 times. Press \"Stop\" when finished.",
+    "step4": "4-\tPress the 'Vowels' button. Say all the vowels (A E I O U) separately. Press \"Stop\" when finished.",
     "tutorial": "Show example"
   },
   "consent": {

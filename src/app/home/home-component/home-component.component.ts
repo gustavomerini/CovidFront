@@ -15,7 +15,8 @@ export class HomeComponentComponent implements OnInit {
 
   mRecorder: any;
   recording: boolean;
-  private baseUrl = 'https://buf.udl.cat/recorder';
+  recordingVowels: boolean;
+  private baseUrl = 'https://covid.udl.cat/recorder';
   registerForm: FormGroup;
 
   cardio = false;
@@ -43,12 +44,14 @@ export class HomeComponentComponent implements OnInit {
 
   ngOnInit() {
     this.recording = false;
+    this.recordingVowels = false;
     this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
 
     this.registerForm = this.formBuilder.group({
       gender: ['', Validators.required],
       age: ['', Validators.required],
       smoker: ['', Validators.required],
+      covid: ['', Validators.required],
     });
 
     this.isMobile = this.deviceService.isMobile() || this.deviceService.isTablet();
@@ -99,7 +102,8 @@ export class HomeComponentComponent implements OnInit {
           const today = new Date();
           let filename = this.registerForm.get('gender').value + '_' +
             this.registerForm.get('age').value + '_' +
-            this.registerForm.get('smoker').value + '_';
+            this.registerForm.get('smoker').value + '_' +
+            this.registerForm.get('covid').value + '_';
 
           if (this.cardio) {
             filename += 'cardio_';
@@ -132,7 +136,7 @@ export class HomeComponentComponent implements OnInit {
             filename += 'other_';
           }
 
-          this.modalService.dismissAll();
+          // this.modalService.dismissAll();
           const audioBlob = new Blob(audioChunks);
 
 
@@ -148,8 +152,9 @@ export class HomeComponentComponent implements OnInit {
           const uo: FileUploaderOptions = {};
           this.uploader.setOptions(uo);
           this.uploader.uploadAll();
+          /*
           this.openModal(this.responsePopup, 'modal-success');
-
+*/
           stream.getTracks()
             .forEach( track => track.stop() ); // stop each of them
         });
@@ -158,6 +163,7 @@ export class HomeComponentComponent implements OnInit {
 
   stopRecording() {
     this.recording = false;
+    this.recordingVowels = false;
     this.mRecorder.stop();
   }
 
