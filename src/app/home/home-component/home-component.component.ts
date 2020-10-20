@@ -167,6 +167,14 @@ export class HomeComponentComponent implements OnInit {
     this.mRecorder.stop();
   }
 
+  stopRecordingVowels() {
+
+  }
+
+  recordAudioVowels() {
+
+  }
+
   closeModal(reason: string) {
     if (confirm('Are you sure?')) {
       this.modalService.dismissAll(reason);
