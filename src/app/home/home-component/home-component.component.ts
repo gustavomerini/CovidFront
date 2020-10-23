@@ -34,8 +34,8 @@ export class HomeComponentComponent implements OnInit {
   isMobile = false;
 
 
-  @ViewChild('successmodal', {static: false}) private responsePopup;
-  @ViewChild('content', {static: false}) private asd;
+  @ViewChild('successmodal') private responsePopup;
+  @ViewChild('content') private asd;
 
   public uploader: FileUploader = new FileUploader({url: this.baseUrl, itemAlias: 'soundBlob'});
 
